@@ -23,7 +23,7 @@ fun FieldSet.selectPage(page: Int): Query {
     return selectAll().limit(ITEM_IN_PAGE, pageOffset)
 }
 
-public fun <T> List<T>.firstOrElse(defaultValue: () -> T): T {
+fun <T> List<T>.firstOrElse(defaultValue: () -> T): T {
     return if (isEmpty()) defaultValue() else this[0]
 }
 
